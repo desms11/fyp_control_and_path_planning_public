@@ -1,0 +1,360 @@
+============================================================================
+  STATISTICAL ANALYSIS  -  NAVIGATION BENCHMARK
+============================================================================
+
+Filters  : Status=SUCCEEDED, Route=(-8.00,-1.00)->(5.00,0.00)
+Algos    : AStar, Dijkstra, GA, RRT
+Routes   : (-8.00,-1.00)->(5.00,0.00)
+Runs     : 40
+  AStar           : n= 10,  success=10/10 (100%)
+  Dijkstra        : n= 10,  success=10/10 (100%)
+  GA              : n= 10,  success=10/10 (100%)
+  RRT             : n= 10,  success=10/10 (100%)
+
+
+  SUCCESS RATE  (runs where status == 'SUCCEEDED')
+
+  AStar           :  10/10  100.0%  |####################|
+  Dijkstra        :  10/10  100.0%  |####################|
+  GA              :  10/10  100.0%  |####################|
+  RRT             :  10/10  100.0%  |####################|
+
+============================================================================
+  Path Length (m)   [lower = better]
+============================================================================
+
+  DESCRIPTIVE STATISTICS
+  Algorithm           n       mean        std     CV%        min         Q1     median         Q3        max  95% CI
+  --------------------------------------------------------------------------
+  AStar              10    13.8533     0.0000    0.0%    13.8533    13.8533    13.8533    13.8533    13.8533  [13.853, 13.853]
+  Dijkstra           10    13.8631     0.0000    0.0%    13.8631    13.8631    13.8631    13.8631    13.8631  [13.863, 13.863]
+  GA                 10    13.5116     0.0687    0.5%    13.4254    13.4564    13.5051    13.5434    13.6556  [13.462, 13.561]
+  RRT                10    14.0269     0.4666    3.3%    13.4842    13.6886    13.9810    14.1943    15.0641  [13.693, 14.361]
+
+  SHAPIRO-WILK NORMALITY  (H0: data is normal)
+  AStar           : all values identical, skipped
+  Dijkstra        : all values identical, skipped
+  GA              : W=0.9300  p=0.4477  [NORMAL PASS]
+  RRT             : W=0.9175  p=0.3365  [NORMAL PASS]
+
+  KRUSKAL-WALLIS H-TEST: H=24.3244  p=0.0000  [SIGNIFICANT *]
+
+  MANN-WHITNEY U  pairwise (with rank-biserial effect size r)
+  Pair                                       U        p        r  effect  sig
+  ----------------------------------------------------------------
+  AStar vs Dijkstra                        0.0   0.0000  +1.0000  large       *
+  AStar vs GA                            100.0   0.0001  -1.0000  large       *
+  AStar vs RRT                            40.0   0.4429  +0.2000  small        
+  Dijkstra vs GA                         100.0   0.0001  -1.0000  large       *
+  Dijkstra vs RRT                         40.0   0.4429  +0.2000  small        
+  GA vs RRT                                8.0   0.0017  +0.8400  large       *
+
+============================================================================
+  Dist Traveled (m)   [lower = better]
+============================================================================
+
+  DESCRIPTIVE STATISTICS
+  Algorithm           n       mean        std     CV%        min         Q1     median         Q3        max  95% CI
+  --------------------------------------------------------------------------
+  AStar              10    13.7817     0.1947    1.4%    13.5604    13.6550    13.6998    13.9301    14.1331  [13.642, 13.921]
+  Dijkstra           10    13.9736     0.2793    2.0%    13.4773    13.8773    14.0408    14.1071    14.3153  [13.774, 14.173]
+  GA                 10    13.4301     0.2107    1.6%    13.1851    13.2690    13.3202    13.6506    13.7275  [13.279, 13.581]
+  RRT                10    13.5474     0.2532    1.9%    13.1504    13.3643    13.5511    13.7147    13.9089  [13.366, 13.729]
+
+  SHAPIRO-WILK NORMALITY  (H0: data is normal)
+  AStar           : W=0.9069  p=0.2601  [NORMAL PASS]
+  Dijkstra        : W=0.9192  p=0.3502  [NORMAL PASS]
+  GA              : W=0.8406  p=0.0449  [NOT normal FAIL]
+  RRT             : W=0.9681  p=0.8725  [NORMAL PASS]
+
+  KRUSKAL-WALLIS H-TEST: H=16.2922  p=0.0010  [SIGNIFICANT *]
+
+  MANN-WHITNEY U  pairwise (with rank-biserial effect size r)
+  Pair                                       U        p        r  effect  sig
+  ----------------------------------------------------------------
+  AStar vs Dijkstra                       30.0   0.1405  +0.4000  medium       
+  AStar vs GA                             86.0   0.0073  -0.7200  large       *
+  AStar vs RRT                            76.0   0.0539  -0.5200  large        
+  Dijkstra vs GA                          92.0   0.0017  -0.8400  large       *
+  Dijkstra vs RRT                         87.0   0.0058  -0.7400  large       *
+  GA vs RRT                               38.0   0.3847  +0.2400  small        
+
+============================================================================
+  Straight-Line (m)   [info = better]
+============================================================================
+
+  DESCRIPTIVE STATISTICS
+  Algorithm           n       mean        std     CV%        min         Q1     median         Q3        max  95% CI
+  --------------------------------------------------------------------------
+  AStar              10    13.0384     0.0000    0.0%    13.0384    13.0384    13.0384    13.0384    13.0384  [13.038, 13.038]
+  Dijkstra           10    13.0384     0.0000    0.0%    13.0384    13.0384    13.0384    13.0384    13.0384  [13.038, 13.038]
+  GA                 10    13.0384     0.0000    0.0%    13.0384    13.0384    13.0384    13.0384    13.0384  [13.038, 13.038]
+  RRT                10    13.0384     0.0000    0.0%    13.0384    13.0384    13.0384    13.0384    13.0384  [13.038, 13.038]
+
+  SHAPIRO-WILK NORMALITY  (H0: data is normal)
+  AStar           : all values identical, skipped
+  Dijkstra        : all values identical, skipped
+  GA              : all values identical, skipped
+  RRT             : all values identical, skipped
+
+  Kruskal-Wallis: skipped (insufficient data)
+
+============================================================================
+  Optimality Ratio   [lower = better]
+============================================================================
+
+  DESCRIPTIVE STATISTICS
+  Algorithm           n       mean        std     CV%        min         Q1     median         Q3        max  95% CI
+  --------------------------------------------------------------------------
+  AStar              10     1.0625     0.0000    0.0%     1.0625     1.0625     1.0625     1.0625     1.0625  [1.062, 1.062]
+  Dijkstra           10     1.0633     0.0000    0.0%     1.0633     1.0633     1.0633     1.0633     1.0633  [1.063, 1.063]
+  GA                 10     1.0363     0.0053    0.5%     1.0297     1.0321     1.0358     1.0387     1.0473  [1.033, 1.040]
+  RRT                10     1.0758     0.0358    3.3%     1.0342     1.0498     1.0723     1.0886     1.1554  [1.050, 1.101]
+
+  SHAPIRO-WILK NORMALITY  (H0: data is normal)
+  AStar           : all values identical, skipped
+  Dijkstra        : all values identical, skipped
+  GA              : W=0.9294  p=0.4424  [NORMAL PASS]
+  RRT             : W=0.9174  p=0.3356  [NORMAL PASS]
+
+  KRUSKAL-WALLIS H-TEST: H=24.4812  p=0.0000  [SIGNIFICANT *]
+
+  MANN-WHITNEY U  pairwise (with rank-biserial effect size r)
+  Pair                                       U        p        r  effect  sig
+  ----------------------------------------------------------------
+  AStar vs Dijkstra                        0.0   0.0000  +1.0000  large       *
+  AStar vs GA                            100.0   0.0001  -1.0000  large       *
+  AStar vs RRT                            40.0   0.4429  +0.2000  small        
+  Dijkstra vs GA                         100.0   0.0001  -1.0000  large       *
+  Dijkstra vs RRT                         40.0   0.4429  +0.2000  small        
+  GA vs RRT                                7.5   0.0015  +0.8500  large       *
+
+============================================================================
+  Smoothness (rad)   [lower = better]
+============================================================================
+
+  DESCRIPTIVE STATISTICS
+  Algorithm           n       mean        std     CV%        min         Q1     median         Q3        max  95% CI
+  --------------------------------------------------------------------------
+  AStar              10     0.0677     0.0000    0.0%     0.0677     0.0677     0.0677     0.0677     0.0677  [0.068, 0.068]
+  Dijkstra           10     0.0696     0.0000    0.0%     0.0696     0.0696     0.0696     0.0696     0.0696  [0.070, 0.070]
+  GA                 10     0.1826     0.0245   13.4%     0.1561     0.1616     0.1755     0.2058     0.2210  [0.165, 0.200]
+  RRT                10     0.2323     0.0653   28.1%     0.1453     0.1913     0.2184     0.2627     0.3650  [0.186, 0.279]
+
+  SHAPIRO-WILK NORMALITY  (H0: data is normal)
+  AStar           : all values identical, skipped
+  Dijkstra        : all values identical, skipped
+  GA              : W=0.8711  p=0.1030  [NORMAL PASS]
+  RRT             : W=0.9284  p=0.4320  [NORMAL PASS]
+
+  KRUSKAL-WALLIS H-TEST: H=35.0064  p=0.0000  [SIGNIFICANT *]
+
+  MANN-WHITNEY U  pairwise (with rank-biserial effect size r)
+  Pair                                       U        p        r  effect  sig
+  ----------------------------------------------------------------
+  AStar vs Dijkstra                        0.0   0.0000  +1.0000  large       *
+  AStar vs GA                              0.0   0.0001  +1.0000  large       *
+  AStar vs RRT                             0.0   0.0001  +1.0000  large       *
+  Dijkstra vs GA                           0.0   0.0001  +1.0000  large       *
+  Dijkstra vs RRT                          0.0   0.0001  +1.0000  large       *
+  GA vs RRT                               24.0   0.0537  +0.5200  large        
+
+============================================================================
+  Planning Time (s)   [lower = better]
+============================================================================
+
+  DESCRIPTIVE STATISTICS
+  Algorithm           n       mean        std     CV%        min         Q1     median         Q3        max  95% CI
+  --------------------------------------------------------------------------
+  AStar              10     0.2284     0.0553   24.2%     0.1732     0.2009     0.2145     0.2354     0.3741  [0.189, 0.268]
+  Dijkstra           10     0.1988     0.3654  183.9%     0.0114     0.0175     0.0185     0.0993     1.0416  [-0.063, 0.460]
+  GA                 10     8.2683     0.5314    6.4%     7.7609     7.8836     8.1509     8.5156     9.4951  [7.888, 8.648]
+  RRT                10     0.0799     0.1635  204.8%     0.0058     0.0064     0.0073     0.0092     0.4913  [-0.037, 0.197]
+
+  SHAPIRO-WILK NORMALITY  (H0: data is normal)
+  AStar           : W=0.7289  p=0.0020  [NOT normal FAIL]
+  Dijkstra        : W=0.5889  p=0.0000  [NOT normal FAIL]
+  GA              : W=0.8617  p=0.0798  [NORMAL PASS]
+  RRT             : W=0.5380  p=0.0000  [NOT normal FAIL]
+
+  KRUSKAL-WALLIS H-TEST: H=27.7771  p=0.0000  [SIGNIFICANT *]
+
+  MANN-WHITNEY U  pairwise (with rank-biserial effect size r)
+  Pair                                       U        p        r  effect  sig
+  ----------------------------------------------------------------
+  AStar vs Dijkstra                       80.0   0.0257  -0.6000  large       *
+  AStar vs GA                              0.0   0.0002  +1.0000  large       *
+  AStar vs RRT                            81.0   0.0211  -0.6200  large       *
+  Dijkstra vs GA                           0.0   0.0002  +1.0000  large       *
+  Dijkstra vs RRT                         84.0   0.0113  -0.6800  large       *
+  GA vs RRT                              100.0   0.0002  -1.0000  large       *
+
+============================================================================
+  Exec Time (s)   [lower = better]
+============================================================================
+
+  DESCRIPTIVE STATISTICS
+  Algorithm           n       mean        std     CV%        min         Q1     median         Q3        max  95% CI
+  --------------------------------------------------------------------------
+  AStar              10   220.5073    19.5184    8.9%   197.0573   209.7111   217.4171   226.6711   266.0023  [206.545, 234.470]
+  Dijkstra           10   229.3413    17.4441    7.6%   201.3629   220.2688   229.1936   237.9801   260.1089  [216.863, 241.820]
+  GA                 10   193.7008     5.6989    2.9%   185.2594   190.3373   192.9911   197.4723   203.7712  [189.624, 197.778]
+  RRT                10   194.8056     5.1835    2.7%   185.9644   190.8648   197.1423   198.9294   200.3651  [191.098, 198.514]
+
+  SHAPIRO-WILK NORMALITY  (H0: data is normal)
+  AStar           : W=0.8977  p=0.2067  [NORMAL PASS]
+  Dijkstra        : W=0.9904  p=0.9972  [NORMAL PASS]
+  GA              : W=0.9626  p=0.8151  [NORMAL PASS]
+  RRT             : W=0.8845  p=0.1471  [NORMAL PASS]
+
+  KRUSKAL-WALLIS H-TEST: H=27.2693  p=0.0000  [SIGNIFICANT *]
+
+  MANN-WHITNEY U  pairwise (with rank-biserial effect size r)
+  Pair                                       U        p        r  effect  sig
+  ----------------------------------------------------------------
+  AStar vs Dijkstra                       32.0   0.1859  +0.3600  medium       
+  AStar vs GA                             96.0   0.0006  -0.9200  large       *
+  AStar vs RRT                            95.0   0.0008  -0.9000  large       *
+  Dijkstra vs GA                          99.0   0.0002  -0.9800  large       *
+  Dijkstra vs RRT                        100.0   0.0002  -1.0000  large       *
+  GA vs RRT                               40.0   0.4727  +0.2000  small        
+
+============================================================================
+  Total Time (s)   [lower = better]
+============================================================================
+
+  DESCRIPTIVE STATISTICS
+  Algorithm           n       mean        std     CV%        min         Q1     median         Q3        max  95% CI
+  --------------------------------------------------------------------------
+  AStar              10   220.5122    19.5182    8.9%   197.0598   209.7168   217.4236   226.6744   266.0070  [206.550, 234.475]
+  Dijkstra           10   229.3467    17.4446    7.6%   201.3667   220.2738   229.2013   237.9904   260.1118  [216.868, 241.826]
+  GA                 10   201.9753     6.0487    3.0%   193.2127   198.1785   201.1782   205.8313   212.1069  [197.648, 206.302]
+  RRT                10   194.9418     5.2382    2.7%   185.9775   190.9386   197.3978   199.0042   200.6321  [191.195, 198.689]
+
+  SHAPIRO-WILK NORMALITY  (H0: data is normal)
+  AStar           : W=0.8977  p=0.2068  [NORMAL PASS]
+  Dijkstra        : W=0.9904  p=0.9972  [NORMAL PASS]
+  GA              : W=0.9512  p=0.6829  [NORMAL PASS]
+  RRT             : W=0.8824  p=0.1392  [NORMAL PASS]
+
+  KRUSKAL-WALLIS H-TEST: H=24.8005  p=0.0000  [SIGNIFICANT *]
+
+  MANN-WHITNEY U  pairwise (with rank-biserial effect size r)
+  Pair                                       U        p        r  effect  sig
+  ----------------------------------------------------------------
+  AStar vs Dijkstra                       32.0   0.1859  +0.3600  medium       
+  AStar vs GA                             85.0   0.0091  -0.7000  large       *
+  AStar vs RRT                            94.0   0.0010  -0.8800  large       *
+  Dijkstra vs GA                          94.0   0.0010  -0.8800  large       *
+  Dijkstra vs RRT                        100.0   0.0002  -1.0000  large       *
+  GA vs RRT                               79.0   0.0312  -0.5800  large       *
+
+============================================================================
+  Completeness   [higher = better]
+============================================================================
+
+  DESCRIPTIVE STATISTICS
+  Algorithm           n       mean        std     CV%        min         Q1     median         Q3        max  95% CI
+  --------------------------------------------------------------------------
+  AStar              10     1.0000     0.0000    0.0%     1.0000     1.0000     1.0000     1.0000     1.0000  [1.000, 1.000]
+  Dijkstra           10     1.0000     0.0000    0.0%     1.0000     1.0000     1.0000     1.0000     1.0000  [1.000, 1.000]
+  GA                 10     1.0000     0.0000    0.0%     1.0000     1.0000     1.0000     1.0000     1.0000  [1.000, 1.000]
+  RRT                10     1.0000     0.0000    0.0%     1.0000     1.0000     1.0000     1.0000     1.0000  [1.000, 1.000]
+
+  SHAPIRO-WILK NORMALITY  (H0: data is normal)
+  AStar           : all values identical, skipped
+  Dijkstra        : all values identical, skipped
+  GA              : all values identical, skipped
+  RRT             : all values identical, skipped
+
+  Kruskal-Wallis: skipped (insufficient data)
+
+============================================================================
+  Avg Vel (m/s)   [higher = better]
+============================================================================
+
+  DESCRIPTIVE STATISTICS
+  Algorithm           n       mean        std     CV%        min         Q1     median         Q3        max  95% CI
+  --------------------------------------------------------------------------
+  AStar              10     0.0628     0.0045    7.2%     0.0531     0.0605     0.0635     0.0653     0.0689  [0.060, 0.066]
+  Dijkstra           10     0.0612     0.0043    7.1%     0.0550     0.0580     0.0614     0.0640     0.0674  [0.058, 0.064]
+  GA                 10     0.0694     0.0014    2.1%     0.0670     0.0686     0.0699     0.0702     0.0712  [0.068, 0.070]
+  RRT                10     0.0696     0.0011    1.6%     0.0677     0.0687     0.0697     0.0703     0.0713  [0.069, 0.070]
+
+  SHAPIRO-WILK NORMALITY  (H0: data is normal)
+  AStar           : W=0.9345  p=0.4933  [NORMAL PASS]
+  Dijkstra        : W=0.9557  p=0.7355  [NORMAL PASS]
+  GA              : W=0.8571  p=0.0704  [NORMAL PASS]
+  RRT             : W=0.9787  p=0.9578  [NORMAL PASS]
+
+  KRUSKAL-WALLIS H-TEST: H=26.7721  p=0.0000  [SIGNIFICANT *]
+
+  MANN-WHITNEY U  pairwise (with rank-biserial effect size r)
+  Pair                                       U        p        r  effect  sig
+  ----------------------------------------------------------------
+  AStar vs Dijkstra                       62.0   0.3843  -0.2400  small        
+  AStar vs GA                              5.0   0.0008  +0.9000  large       *
+  AStar vs RRT                             3.0   0.0004  +0.9400  large       *
+  Dijkstra vs GA                           2.0   0.0003  +0.9600  large       *
+  Dijkstra vs RRT                          0.0   0.0002  +1.0000  large       *
+  GA vs RRT                               49.0   0.9698  +0.0200  negligible   
+
+============================================================================
+  Energy Eff.   [higher = better]
+============================================================================
+
+  DESCRIPTIVE STATISTICS
+  Algorithm           n       mean        std     CV%        min         Q1     median         Q3        max  95% CI
+  --------------------------------------------------------------------------
+  AStar              10     1.0054     0.0141    1.4%     0.9802     0.9945     1.0112     1.0145     1.0216  [0.995, 1.015]
+  Dijkstra           10     0.9924     0.0201    2.0%     0.9684     0.9827     0.9873     0.9990     1.0286  [0.978, 1.007]
+  GA                 10     1.0063     0.0146    1.4%     0.9866     0.9922     1.0111     1.0128     1.0310  [0.996, 1.017]
+  RRT                10     1.0357     0.0378    3.7%     0.9729     1.0130     1.0252     1.0638     1.1026  [1.009, 1.063]
+
+  SHAPIRO-WILK NORMALITY  (H0: data is normal)
+  AStar           : W=0.9100  p=0.2812  [NORMAL PASS]
+  Dijkstra        : W=0.9136  p=0.3068  [NORMAL PASS]
+  GA              : W=0.9223  p=0.3765  [NORMAL PASS]
+  RRT             : W=0.9647  p=0.8377  [NORMAL PASS]
+
+  KRUSKAL-WALLIS H-TEST: H=10.1289  p=0.0175  [SIGNIFICANT *]
+
+  MANN-WHITNEY U  pairwise (with rank-biserial effect size r)
+  Pair                                       U        p        r  effect  sig
+  ----------------------------------------------------------------
+  AStar vs Dijkstra                       69.5   0.1508  -0.3900  medium       
+  AStar vs GA                             49.0   0.9698  +0.0200  negligible   
+  AStar vs RRT                            22.0   0.0376  +0.5600  large       *
+  Dijkstra vs GA                          27.0   0.0890  +0.4600  medium       
+  Dijkstra vs RRT                         15.0   0.0091  +0.7000  large       *
+  GA vs RRT                               25.0   0.0640  +0.5000  large        
+
+============================================================================
+  Recoveries   [lower = better]
+============================================================================
+
+  DESCRIPTIVE STATISTICS
+  Algorithm           n       mean        std     CV%        min         Q1     median         Q3        max  95% CI
+  --------------------------------------------------------------------------
+  AStar              10     4.7000     5.0122  106.6%     0.0000     0.2500     3.5000     7.7500    14.0000  [1.114, 8.286]
+  Dijkstra           10     6.5000     4.4535   68.5%     0.0000     5.2500     6.0000     9.0000    15.0000  [3.314, 9.686]
+  GA                 10     0.0000     0.0000    0.0%     0.0000     0.0000     0.0000     0.0000     0.0000  [0.000, 0.000]
+  RRT                10     0.0000     0.0000    0.0%     0.0000     0.0000     0.0000     0.0000     0.0000  [0.000, 0.000]
+
+  SHAPIRO-WILK NORMALITY  (H0: data is normal)
+  AStar           : W=0.8636  p=0.0842  [NORMAL PASS]
+  Dijkstra        : W=0.9168  p=0.3307  [NORMAL PASS]
+  GA              : all values identical, skipped
+  RRT             : all values identical, skipped
+
+  KRUSKAL-WALLIS H-TEST: H=22.1682  p=0.0001  [SIGNIFICANT *]
+
+  MANN-WHITNEY U  pairwise (with rank-biserial effect size r)
+  Pair                                       U        p        r  effect  sig
+  ----------------------------------------------------------------
+  AStar vs Dijkstra                       41.5   0.5400  +0.1700  small        
+  AStar vs GA                             85.0   0.0022  -0.7000  large       *
+  AStar vs RRT                            85.0   0.0022  -0.7000  large       *
+  Dijkstra vs GA                          90.0   0.0007  -0.8000  large       *
+  Dijkstra vs RRT                         90.0   0.0007  -0.8000  large       *
+  GA vs RRT                               50.0   1.0000  +0.0000  negligible   
