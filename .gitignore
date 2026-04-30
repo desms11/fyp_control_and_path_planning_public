@@ -1,0 +1,116 @@
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+*.jks
+
+# Editor and IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Python cache and virtual environments
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.python-version
+.venv/
+venv/
+env/
+
+# Test and coverage artifacts
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Build and packaging outputs
+build/
+dist/
+site/
+*.egg-info/
+
+# Logs and temporary files
+*.log
+logs/
+tmp/
+temp/
+
+# Archives and transfer bundles
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+
+# Generated analysis and export artifacts
+results/
+reports/
+*.mcap
+*.bag
+
+# Workspace-specific generated content
+public_fyp_repo.zip
+public_fyp_repo/**/install/
+public_fyp_repo/**/log/
+public_fyp_repo/**/logs/
+public_fyp_repo/**/build/
+public_fyp_repo/**/dist/
+public_fyp_repo/**/coverage/
+
+# ROS 2 runtime and bag data
+.ros/
+*.db3
+rosbag2_*/
+
+# Java / Maven
+target/
+.gradle/
+
+# Node.js (if applicable)
+node_modules/
+npm-debug.log
+
+# Local development scripts and data
+.local/
+
+# Patch and backup files
+*.orig
+*.rej
+*.backup
+*.bkp
+
+# Sublime Text and other editors
+*.sublime-workspace
+*.sublime-project
+*.code-workspace
+
+# JetBrains IDEs
+*.iml
+*.iws
+*.ipr
+
+# Windows
+$RECYCLE.BIN/
+ehthumbs.db
+Desktop.ini
+
+# Linux
+.directory
+
+# Temporary files and directories
+.#*
+*.tmp
+temp/
