@@ -1,4 +1,4 @@
-# FYP Control and Path Planning
+# FYP UAV Control and Path Planning
 
 This repository is a public snapshot of a final-year project on Crazyflie path planning and control. It combines ROS 2/Crazyswarm2 flight workflows, simulator assets, trajectory scripts, navigation benchmark outputs, and post-run analysis artifacts.
 
